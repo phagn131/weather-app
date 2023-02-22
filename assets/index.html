@@ -20,21 +20,34 @@
             <div class="form-group">
                 <label for="city-search">Search city</label>
                 <input type="text" id="password" class="form-control" placeholder="Search for a city" required />
-                <button type="submit" class="btn btn-primary" id="search-button">Submit<i class="fas fa-search"></i>
+                <button type="submit" class="btn btn-primary" id="searchButton">Submit<i class="fas fa-search"></i>
                 </button>
             </div>
-                <button type="submit" class="btn btn-subtle" id="clear-search">Clear search</button>
+                <button type="submit" class="btn btn-subtle" id="clearSearch">Clear search</button>
                 <form id="search"></form>
             </div>
-            <div class="col-lg-10">
-              <div cladd="row">
-                <div class="container-fluid">
-                  <h1>
-                    Test!!!
-                  </h1>
-                </div>
-              </div>
-            </div>
+            <main class="container-fluid">
+              <div class="row">
+                <section class="col-12 col-md-4 col-lg-3" id="currentWeather">
+                  <div class="card custom-card">
+                    <h3 class="card-header" id="cityName" placeholder="cityName">
+                    </h3>
+                    <div class="card-body">
+                      <div class="card-text">
+                      </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="card" id="cityName"></li>
+                      <li class="list-group-item"></li>
+                      <li class="list-group-item"></li>
+                      <li class="list-group-item"></li>
+                    </ul>
+                    <div class="card-footer">
+                      <button class="btn btn-block custom-btn" data-toggle="modal" data-target="#project-modal">Add
+                        Project</button>
+                    </div>
+                  </div>
+                </section>
     </div>
           
     </header>
