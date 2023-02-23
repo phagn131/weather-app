@@ -12,11 +12,13 @@ var humidityEl = $('#currentHumidity');
 var windEl = $('#currentWind');
 var futureForecastEl = $('#futureForecast');
 var fiveDayEl = $('#fiveDayForecast');
-var apiKey = $('8c51fe51c4de669f61dd9394932b043e')
+var apiKey = '8c51fe51c4de669f61dd9394932b043e'
 
 function getApi() {
     // fetch request gets a list of all the repos for the node.js organization
-    var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + apiKey;
+    var requestUrl = "https://api.openweathermap.org/geo/1.0/direct?q=Houston&appid=" + apiKey;
+
+    
   
     // add lat and long
 
@@ -28,6 +30,8 @@ function getApi() {
         console.log(data);
       })};
 
+      getApi();
+
     // return repsonse 
 
       tempEl.text
@@ -37,5 +41,3 @@ function getApi() {
     // commit to local storage for search history button
 
     // Render cards with 5-day forecast after retreiving data
-
-    
