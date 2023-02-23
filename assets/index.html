@@ -21,42 +21,48 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="form-group">
-        <label for="citySearch">Search city</label>
-        <input type="text" id="password" class="form-control" placeholder="Search for a city" required />
+        <h2 for="citySearch">Search city</h2>
+        <input type="text" id="searchCity" class="form-control" placeholder="Search for a city" required />
         <button type="submit" class="btn btn-primary" id="searchButton">Submit<i class="fas fa-search"></i>
         </button>
       </div>
       <button type="submit" class="btn btn-danger" id="clearSearch">Clear search</button>
       <form id="search"></form>
     </div>
-    <main class="container-fluid">
-      <div class="row">
-        <section class="col-12 col-md-4 col-lg-3" id="currentWeather">
-          <div class="card custom-card">
-            <h3 class="card-header" id="cityName" placeholder="cityName">
-            </h3>
-
-            <div class="col-sm-9 container-fluid" id="weatherInfo">
-              <div class="card-body">
-                <div class="card">
-                  <h2 class="listGroupTitle"></h2>
-                  <p class="listGroupItem" id="currentTemp"></p>
-                  <p class="listGroupItem" id="currentHumidity"></p>
-                  <p class="listGroupItem" id="currentWind"></p>
-                </div>
-
-                <div class="card-footer">
-                  <button class="btn btn-block custom-btn" data-toggle="modal" data-target="#project-modal">Add
-                    Project</button>
-                </div>
-              </div>
-        </section>
+    <h3 class="searchHistory">Search History</h3>
+    <div class="col" id="searchHistory">
+      <div class="container" id="searchContainer">
       </div>
+    </div>
+  </div>
+  <main class="container-fluid">
+    <div class="row">
+      <section class="col-12 col-md-4 col-lg-3" id="currentWeather">
+        <div class="card-custom-card">
+          <h3 class="card-header" id="cityName" placeholder="cityName">
+          </h3>
 
-      </header>
-      <!-- Added link to the jQuery library -->
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script type="text/javascript" src="assets/js/script.js"></script>
+          <div class="col-sm-9 container-fluid" id="weatherInfo">
+            <div class="card-body">
+              <div class="card">
+                <h2 class="listGroupTitle"></h2>
+                <p class="listGroupItem" id="currentTemp"></p>
+                <p class="listGroupItem" id="currentHumidity"></p>
+                <p class="listGroupItem" id="currentWind"></p>
+              </div>
+
+              <h3 id="futureForecast"></h3>
+              <div class="row" id="fiveDayForecast">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- Added link to the jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
 
 </html>
