@@ -51,7 +51,7 @@ function fiveDayForecast(cityData) {
       $("#day5Wind").html("wind: " + data.list[5].wind.speed + " MPH")
       $("#day5Humidity").html("humidity: " + data.list[5].main.humidity)
 
-      
+   
       
     })
 };
@@ -77,7 +77,8 @@ onClickEl.click(function (event) {
 
   var city = CityEl.val()
   console.log(city);
-  getCityWeather(city)
+  getCityWeather(city);
+  localStorage.setItem(city, CityEl.name);
 }) 
 
 
