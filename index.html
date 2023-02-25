@@ -24,12 +24,14 @@
     <div class="col-sm-3">
       <div class="form-group">
         <h2 for="citySearch">Search for a City: </h2>
+        <form id="search">
         <input type="text" id="searchCity" class="form-control" placeholder="Search for a city" required />
-        <button type="submit" class="btn btn-primary" id="searchButton">Submit<i class="fas fa-search"></i>
+        <button type="button" class="btn btn-primary" id="searchButton">Submit<i class="fas fa-search"></i>
         </button>
+        </form>
       </div>
       <button type="submit" class="btn btn-danger" id="clearSearch">Clear search</button>
-      <form id="search"></form>
+      
     </div>
     <h3 class="searchHistory">Search History</h3>
     <div class="col" id="searchHistory">
@@ -41,7 +43,7 @@
     <div class="row">
       <section class="col-12 col-md-4 col-lg-3" id="currentWeather">
         <div class="card-custom-card">
-          <h3 class="card-header" id="cityName" placeholder="cityName">
+          <h3 class="card-header" id="cityName">
           </h3>
 
           <div class="col-sm-9 container-fluid" id="weatherInfo">
@@ -55,6 +57,29 @@
 
               <h3 id="futureForecast"></h3>
               <div class="row" id="fiveDayForecast">
+                <h4 class="day-1" id="day1Temp"></h4>
+                <h4 class="day-1" id="day1Wind"></h4>
+                <h4 class="day-1" id="day1Humidity"></h4>
+              </div>
+              <div class="row" id="fiveDayForecast">
+                <h4 class="day-2" id="day2Temp"></h4>
+                <h4 class="day-2" id="day2Wind"></h4>
+                <h4 class="day-2" id="day2Humidity"></h4>
+              </div>
+              <div class="row" id="fiveDayForecast">
+                <h4 class="day-3" id="day3Temp"></h4>
+                <h4 class="day-3" id="day3Wind"></h4>
+                <h4 class="day-3" id="day3Humidity"></h4>
+              </div>
+              <div class="row" id="fiveDayForecast">
+                <h4 class="day-4" id="day4Temp"></h4>
+                <h4 class="day-4" id="day4Wind"></h4>
+                <h4 class="day-4" id="day4Humidity"></h4>
+              </div>
+              <div class="row" id="fiveDayForecast">
+                <h4 class="day-5" id="day5Temp"></h4>
+                <h4 class="day-5" id="day5Wind"></h4>
+                <h4 class="day-5" id="day5Humidity"></h4>
               </div>
             </div>
           </div>
