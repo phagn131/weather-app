@@ -26,6 +26,7 @@ function fiveDayForecast(cityData) {
     })
     .then(function (data) {
       console.log(data);
+      
       $("#day1").html("city: " + data.city.name)
       $("#day1Temp").html("temp: " + data.list[1].main.temp + " F")
       $("#day1Wind").html("wind: " + data.list[1].wind.speed + " MPH")
@@ -66,9 +67,9 @@ function getCityWeather(cityData) {
     .then(function (data) {
       console.log(data);
       $("#cityName").html("Current weather for: " + data.name)
-      $("#currentTemp").html("temp: " + data.main.temp)
-      $("#currentHumidity").html("humidity: " + data.main.humidity)
-      $("#currentWind").html("wind: " + data.wind.speed)
+      $("#currentTemp").html("temp: " + data.main.temp + " F")
+      $("#currentHumidity").html("humidity: " + data.main.humidity + " %")
+      $("#currentWind").html("wind: " + data.wind.speed + " MPH")
       fiveDayForecast(cityData)
     })
 };
