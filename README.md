@@ -16,6 +16,8 @@ These searches are saved to local storage and a clear history button is availabl
 
 ## Credits
 
+- Assistance from the my instructional team, my tutor and ask BCS tool
+
 This project used openweathermap.org API calls to retrieve data.
 (https://openweathermap.org/api)
 
