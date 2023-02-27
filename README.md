@@ -35,7 +35,7 @@ This project used openweathermap.org API calls to retrieve data.
 ## Mock-Up
 The following image demonstrates the functionality of the application:
 
-![Weather Dashboard](/assets/images/weather-img-5.png)
+![Weather Dashboard](/assets/06-server-side-apis-homework-demo.png)
 
 ## Contact Information:
 - Github: [phagn13@github.com](https://github.com/phagn13@github.com)
