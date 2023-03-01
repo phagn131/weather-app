@@ -28,6 +28,8 @@ function fiveDayForecast(cityData) {
     .then(function (data) {
       console.log(data);
       // Add weather icons
+      for(var i = 0; i < data.list.length; i++){
+
       $("#day1").html("city: " + data.city.name)
       $("#day1Temp").html("temp: " + data.list[1].main.temp + " F")
       $("#day1Wind").html("wind: " + data.list[1].wind.speed + " MPH")
@@ -52,7 +54,9 @@ function fiveDayForecast(cityData) {
       $("#day5Temp").html("temp: " + data.list[5].main.temp + " F")
       $("#day5Wind").html("wind: " + data.list[5].wind.speed + " MPH")
       $("#day5Humidity").html("humidity: " + data.list[5].main.humidity + " %")
-
+      
+      }
+      
 
 
     })
@@ -81,8 +85,21 @@ onClickEl.click(function (event) {
   var city = CityEl.val()
   console.log(city);
   getCityWeather(city);
-  localStorage.setItem(city, CityEl.name);
+  localStorage.setItem("city", city);
+  var history = JSON.parse(window.localStorage.getItem("city"));
+  if (history.length) {
+  // Add calls the submit button function
+  }
+  for(var i = 0; i < history.length; i++) {
+    makeRow(history[i])
+  }
   // Set Clear Local Storage
   
+
 })
 
+
+function makeRow(text) {
+  var li = $("<li>").addClass("list-group-item list-group-item-action").text(text);
+  $(".history").append(li);
+}
